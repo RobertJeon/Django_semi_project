@@ -4,7 +4,6 @@
     <h5 class="my-3 border-bottom pb-2">질문등록</h5>
     <form method="post">
         {% csrf_token %}
-        <!-- {{ form.as_p }} -->
         <!-- 오류표시 Start -->
         {% if form.errors %}
         <div class="alert alert-danger" role="alert">
@@ -27,7 +26,7 @@
         <div class="mb-3">
             <label for="content" class="form-label">내용</label>
             <textarea class="form-control" name="content"
-                    id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
+                id="content" rows="10">{{ form.content.value|default_if_none:'' }}</textarea>
         </div>
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>

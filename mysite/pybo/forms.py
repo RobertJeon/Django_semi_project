@@ -1,7 +1,6 @@
 from django import forms
 from pybo.models import Question, Answer
 
-
 class QuestionForm(forms.ModelForm):
     class Meta:
         model = Question  # 사용할 모델
@@ -14,6 +13,7 @@ class QuestionForm(forms.ModelForm):
             'subject': '제목',
             'content': '내용',
         }
+
 class AnswerForm(forms.ModelForm):
     class Meta:
         model = Answer
